@@ -10,41 +10,46 @@
   <link href="css/speedometer.css" rel="stylesheet" type="text/css" />
   <link href="css/googlemap.css" rel="stylesheet" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 </head>
 
 <body>
   <!-- Container begins -->
-  <div class="container">
-    <!-- Speedometer section begins -->
-    <div class="speedometer-section">
-      <h1>Speedometer</h1>
-      <hr />
+  <div class="container bg-light row mx-auto vh-100 pt-5">
+    <div class="col-md-12">
+      <!-- Google map section begins -->
+      <div class="googlemap-section col-md-12">
+        <!-- Google map section ends -->
+        <h1>Google Maps Example</h1>
+        <div id="map"></div>
+      </div>
+    </div> <!-- Speedometer section begins -->
+    <!-- <div class="col-md-4 bg-primary">
+      <div class="speedometer-section">
+        <h1 class="text-light text-center">Speedometer</h1>
+        <hr />
 
-      <div>
-        Speed
-        <input id="speedoMeterInputRange-1" type="range" min="0" max="350" value="10" />
-        <!-- use AJAx to get value from arduino device  -->
-        <span id="speedoMeterInputRange-value-1">10</span>
+        <div class="mx-auto">
+          Speed
+          <input id="speedoMeterInputRange-1" type="range" min="0" max="350" value="10" /> -->
+    <!-- use AJAx to get value from arduino device  -->
+    <!-- <span id="speedoMeterInputRange-value-1">10</span>
+
+          <br />
+          Manual adjust speed
+          <input type="number" id="manualSpeedInput" min="0" max="180" step="5" />
+        </div>
 
         <br />
-        Manual adjust speed
-        <input type="number" id="manualSpeedInput" min="0" max="180" step="5" />
-      </div>
+        <br />
+        <div id="speedometer-1"></div>
 
-      <br />
-      <br />
-      <div id="speedometer-1"></div>
+        <br />
+      </div> -->
+  </div>
+  <!-- End of speedometer section -->
 
-      <br />
-    </div>
-    <!-- End of speedometer section -->
-
-    <!-- Google map section begins -->
-    <div class="googlemap-section">
-      <!-- Google map section ends -->
-      <h1>Google Maps Example</h1>
-      <div id="map"></div>
-    </div>
   </div>
 
   <script>
@@ -151,6 +156,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4piV9fPz58O0LnJh0kvu9alXh-ovk7vw&callback=initMap" async defer></script>
   <!-- Container ends  -->
 </body>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/ui-popover.js"></script>
 <script src="js/speedometer.js"></script>
 <script type="text/javascript">
   var speedoMeter1 = new speedometer();
