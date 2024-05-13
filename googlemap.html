@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps Example</title>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Google Maps Example</h1>
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        // Coordinates for the location (e.g., latitude and longitude)
+
+        var coordinates = { lat: 7.7485, lng: 8.5343 }; // New York City coordinates
+
+        // Create a new map centered at the coordinates
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15, // Zoom level
+          center: coordinates, // Center the map at the coordinates
+        });
+
+        // Create a marker and set its position on the map
+        var marker = new google.maps.Marker({
+          position: coordinates,
+          map: map,
+        });
+      }
+    </script>
+
+    <!-- Load the Google Maps JavaScript API with your API key -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4piV9fPz58O0LnJh0kvu9alXh-ovk7vw&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>

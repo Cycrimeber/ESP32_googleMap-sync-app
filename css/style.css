@@ -1,0 +1,12 @@
+.container{
+    display:flex;
+    justify-content: space-around;
+}
+
+.speedometer-section{
+    width: 40%;
+}
+
+.googlemap-section{
+    width: 60%;
+}
