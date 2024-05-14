@@ -1,9 +1,11 @@
+<?php include './includes/api_key.php';
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
   <title>Live GPS Tracking</title>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4piV9fPz58O0LnJh0kvu9alXh-ovk7vw&callback=initMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=<?= $api_key; ?>"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">

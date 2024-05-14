@@ -1,15 +1,12 @@
-<!--
-  *index.html
-  *author: Manivannan R
-  *project: Speedometer
--->
+<?php include './includes/api_key.php';
+?>
 <html>
 
 <head>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link href="css/speedometer.css" rel="stylesheet" type="text/css" />
   <link href="css/googlemap.css" rel="stylesheet" type="text/css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=<?= $api_key; ?>"></script>
 
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 </head>
