@@ -18,7 +18,9 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $data = array(
         'latitude' => $row['latitude'],
-        'longitude' => $row['longitude']
+        'longitude' => $row['longitude'],
+        'emf' => $row['emf'],
+        'metallic' => $row['metallic']
     );
     echo json_encode($data);
 } else {
